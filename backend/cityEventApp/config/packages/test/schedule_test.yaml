@@ -1,0 +1,11 @@
+zenstruck_schedule:
+  timezone: "America/Regina"
+  tasks:
+    send_test_event_notifications:
+      task: 'app:send-notifications'
+      description: 'Test sending email notifications based on user preferences.'
+      frequency: '* * * * *'  # Every minute (for testing)
+      timezone: "America/Regina"
+      without_overlapping:
+        enabled: false
+        ttl: 3600  # Prevent overlap for testing, set to 1 hour

@@ -1,0 +1,11 @@
+zenstruck_schedule:
+  timezone: "America/Regina" # Change to your preferred timezone
+  tasks:
+    send_event_notifications:
+      task: 'app:send-notifications'
+      description: 'Sends email notifications based on user preferences (run every day at 2AM).'
+      frequency: '0 2 * * *' # Every day at 2 AM
+      timezone: "America/Regina"
+      without_overlapping:
+        enabled: false
+        ttl: 86400

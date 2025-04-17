@@ -1,0 +1,128 @@
+controllers:
+    resource:
+        path: ../src/Controller/
+        namespace: App\Controller
+    type: attribute
+
+auth_signin:
+    path: /auth/signin
+    controller: App\Controller\SignInController::signIn
+    methods: [POST]
+
+
+events:
+    path: /events
+    controller: App\Controller\EventController::getEvents
+    methods: [GET]
+
+eventsAdvanced:
+    path: /eventsWithFilterAndSorter
+    controller: App\Controller\EventController::getEventsWithFilterAndSorter
+    methods: [ GET ]
+
+postEvents:
+    path: /events
+    controller: App\Controller\EventController::postEvent
+    methods: [POST]
+
+report:
+    path: /api/reports
+    controller: App\Controller\ReportController::creatReport
+    methods: [POST]
+
+upload:
+    path: /events/upload
+    controller: App\Controller\EventController::uploadImages
+    methods: [POST]
+
+view_user_events:
+    path: /myevents
+    controller: App\Controller\EventController::getUserEvents
+    methods: [GET]
+
+event_media:
+    path: /events/media
+    controller: App\Controller\MediaController::getEventImages
+    methods: [GET]
+
+bookmarks:
+    path: /events/bookmarks/user
+    controller: App\Controller\BookmarkedEventController::getBookmarkedEventsForAUser
+    methods: [GET]
+
+isBookmarked:
+    path: /events/bookmarks
+    controller: App\Controller\BookmarkedEventController::isEventBookmarked
+    methods: [GET]
+
+create_bookmark:
+    path: /events/bookmarks
+    controller: App\Controller\BookmarkedEventController::createBookmarkedEvent
+    methods: [POST]
+
+remove_bookmark:
+    path: /events/bookmarks
+    controller: App\Controller\BookmarkedEventController::removeBookmarkedEvent
+    methods: [DELETE]
+
+users:
+    path: /users
+    controller: App\Controller\UserController::getUsers
+    methods: [GET]
+
+ban_user:
+    path: /banuser
+    controller: App\Controller\BannedController::banUser
+    methods: [POST]
+
+unban_user:
+    path: /unbanuser
+    controller: App\Controller\BannedController::unbanUser
+    methods: [DELETE]
+
+check_banned:
+    path: /checkbanned/{userId}
+    controller: App\Controller\BannedController::checkBanned
+    methods: [GET]
+
+
+create_token:
+    path: /create_token
+    controller: App\Controller\SignInController::login
+    methods: [POST]
+
+update_user_events:
+    path: /myevents/{eventId}
+    controller: App\Controller\EventController::updateUserEvents
+    methods: [POST, DELETE, PUT]
+
+create_subscription:
+    path: /api/subscription
+    controller: App\Controller\SubscriptionController::createSubscription
+    methods: [POST]
+
+get_subscription:
+    path: /api/subscription/{username}
+    controller: App\Controller\SubscriptionController::getSubscriptionStatus
+    methods: [GET]
+
+toggle_interest:
+    path: /events/interactions/interest
+    controller: App\Controller\EventController::toggleInterest
+    methods: [GET, POST, DELETE]
+
+toggle_attendance:
+    path: /events/interactions/attendance
+    controller: App\Controller\EventController::toggleAttendance
+    methods: [GET, POST, DELETE]
+
+
+follow_user:
+    path: /user/follow/{userId}
+    controller: App\Controller\FollowController::setFollowing
+    methods: [POST]
+
+follow_user_status:
+    path: /user/follow/{userId}
+    controller: App\Controller\FollowController::getFollowStatus
+    methods: [ GET ]

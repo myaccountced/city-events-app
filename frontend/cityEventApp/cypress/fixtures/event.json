@@ -1,0 +1,16 @@
+{
+  "eventID": 1,
+  "eventCreator": 123,
+  "eventTitle": "Sample Event Title",
+  "eventCategory": "Conference",
+  "eventAudience": "General Public",
+  "eventLocation": "Location A",
+  "eventStartDate": "2024-12-01T09:00:00",
+  "eventEndDate": "2024-12-01T18:00:00",
+  "eventStartTime": "09:00:00",
+  "eventEndTime": "18:00:00",
+  "eventDescription": "This is a description of the sample event.",
+  "eventLinks": "https://a.com",
+  "eventImages": "https://a/image.jpg",
+  "moderatorApproved": true
+}

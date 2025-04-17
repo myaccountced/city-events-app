@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Password Reset Email Sent{% endblock %}
+
+{% block body %}
+    <div class="password-reset-container">
+        <h2>Password Reset Email Sent</h2>
+        <p>
+            If an account matching your email exists, then an email was just sent that contains a link that you can use to reset your password.
+        </p>
+        <p>If you don't receive an email please check your spam folder or <a href="{{ path('app_forgot_password_request') }}" class="retry-link">try again</a>.</p>
+    </div>
+{% endblock %}
+
+{% block stylesheets %}
+    <style>
+        .password-reset-container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: 'Arial', sans-serif;
+            color: #333;
+        }
+
+        .password-reset-container h2 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .password-reset-container p {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+
+        .retry-link {
+            color: #007BFF;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .retry-link:hover {
+            text-decoration: underline;
+        }
+    </style>
+{% endblock %}

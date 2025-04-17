@@ -1,0 +1,12 @@
+doctrine:
+  dbal:
+    url: "mysql://root:@Database3!@127.0.0.1:3306/eventsapp?serverVersion=11.5.2-MariaDB"
+    #url: "mysql://root:password@127.0.0.1:3306/eventsapp?serverVersion=11.5.2-MariaDB"
+    #url: "mysql://root:Zu_Events_3@127.0.0.1:3306/eventsapp?serverVersion=11.5.2-MariaDB"
+    # Or use your actual database connection details
+    # url: '%env(DATABASE_URL)%'
+
+  orm:
+    auto_generate_proxy_classes: true
+    naming_strategy: doctrine.orm.naming_strategy.underscore
+    auto_mapping: true

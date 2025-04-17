@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Sample Title",
+    "description": "Description goes here.",
+    "creator": 1,
+    "audience": 1,
+    "location": "Location #1",
+    "startDate": 1,
+    "startTime": 1,
+    "endDate": 1,
+    "endTime": 1,
+    "links": "Link #1",
+    "images": "Image Path",
+    "category": "Category",
+    "moderatorApproved": true
+  },
+  {
+    "id": 2,
+    "title": "Another Title",
+    "description": "Here goes a description.",
+    "creator": 2,
+    "audience": 1,
+    "location": "Location #2",
+    "startDate": 1,
+    "startTime": 1,
+    "category": "Category",
+    "moderatorApproved": true
+  }
+]

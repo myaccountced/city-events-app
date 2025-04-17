@@ -1,0 +1,13 @@
+*/public/uploads/*
+
+!*/public/uploads/1.jpg
+!*/public/uploads/2.jpg
+!*/public/uploads/chili1.jpg
+!*/public/uploads/chilidisaster.jpg
+!*/public/uploads/dancing.jpg
+!*/public/uploads/kevin-chili.webp
+!*/public/uploads/p1.jpg
+
+###> lexik/jwt-authentication-bundle ###
+#/config/jwt/*.pem
+###< lexik/jwt-authentication-bundle ###
